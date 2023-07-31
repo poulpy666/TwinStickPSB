@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private PlayerController pc;
     [SerializeField] public int noOfPlayer;
     [SerializeField] private GameObject ball;
-    private GameObject tempBull;
+    public GameObject tempBull;
     private Vector2 direction;
     private void GetDirection()
     {

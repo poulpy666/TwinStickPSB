@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8605953868251342799}
+  speed: 6
 --- !u!136 &6830707715304616613
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -164,3 +165,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pc: {fileID: 8663527033328024654}
   noOfPlayer: 1
+  ball: {fileID: 0}
+  tempBull: {fileID: 0}
