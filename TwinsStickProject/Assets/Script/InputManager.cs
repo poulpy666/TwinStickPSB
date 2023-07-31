@@ -6,7 +6,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private PlayerController pc;
-    [SerializeField] private int noOfPlayer;
+    [SerializeField] public int noOfPlayer;
     [SerializeField] private GameObject ball;
     private GameObject tempBull;
     private Vector2 direction;

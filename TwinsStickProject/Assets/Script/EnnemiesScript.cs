@@ -1,31 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class EnnemiesScript : MonoBehaviour
 {
-    private bool playerInSight;
-    private Transform player;
-    [SerializeField] private Rigidbody rb;
-    public  void Movement()
+   public enum EnnemiState
     {
-        if ((playerInSight) && (Vector3.Distance(transform.position, player.position) > 5))
+        Chase,
+        Attack
+    }
+    [SerializeField] private EnnemiState currentState;
+    private void Chase()
+    {
+
+    }
+    private void Attack()
+    {
+        
+    }
+    private void CheckForState()
+    {
+
+    }
+    private void Update()
+    {
+        CheckForState();
+
+        switch(currentState)
         {
-            transform.LookAt(player.transform.position);
-            rb.velocity = transform.forward;
+            case EnnemiState.Chase:
+            Chase();
+            break;
+            case EnnemiState.Attack:
+            Attack(); 
+            break;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<PlayerController>() != null)
-
-            player = other.transform;
-            playerInSight = true;
-        
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        
-    }
 }
+
